@@ -1,0 +1,33 @@
+{
+  "id": "in.avinash.dual.lossless",
+  "name": "Avinash Dual Lossless",
+  "version": "1.0.0",
+  "description": "Internet Archive and personal FLAC library",
+  "resources": [
+    "search",
+    "stream"
+  ],
+  "bitchordAuth": true,
+  "settings": [
+    {
+      "key": "quality",
+      "type": "select",
+      "label": "Audio quality",
+      "default": "max",
+      "options": [
+        {
+          "value": "max",
+          "label": "Max (prefer FLAC)"
+        },
+        {
+          "value": "lossless",
+          "label": "Lossless (FLAC/WAV when available)"
+        },
+        {
+          "value": "high",
+          "label": "High (other available audio)"
+        }
+      ]
+    }
+  ]
+}

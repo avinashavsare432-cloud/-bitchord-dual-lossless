@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: avinash-dual-lossless
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: BITCHORD_HOSTS
+        sync: false
+      - key: BITCHORD_AUTH_MODE
+        value: log
+      - key: MUSIC_DIR
+        value: ./music
